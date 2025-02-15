@@ -1,3 +1,13 @@
 {
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@shared/*": ["./src/shared/*"]
+    },
+    "jsx": "react-jsx"
+  },
   "extends": "@react-native/typescript-config/tsconfig.json"
 }
