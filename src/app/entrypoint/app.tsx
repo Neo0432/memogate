@@ -1,7 +1,6 @@
 import {JSX} from 'react';
-// import {Navigation} from '@app/navigation';
 import {StatusBar, View} from 'react-native';
-import {Registration} from '@screens/sign-up';
+import {Navigation} from '@app/navigation';
 
 export function App(): JSX.Element {
   return (
@@ -11,8 +10,7 @@ export function App(): JSX.Element {
         backgroundColor="transparent"
         barStyle="dark-content"
       />
-      {/*<Navigation />*/}
-      <Registration />
+      <Navigation />
     </>
   );
 }

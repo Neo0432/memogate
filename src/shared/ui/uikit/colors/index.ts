@@ -15,6 +15,7 @@ const additional = {
   error: '#C2534C',
   success: '#39C662',
   coreblue: '#1F3C54',
+  apricot: '#ED9975',
   gradientOrange:
     'linear-gradient(180.78deg, #FE650F -13.4%, rgba(255, 245, 0, 0.03125) 182.82%)',
 };

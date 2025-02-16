@@ -21,7 +21,8 @@ export function RenderIcon({
     fieldState.isTouched &&
     fieldState.isDirty &&
     !fieldState.invalid &&
-    fieldName !== 'password'
+    fieldName !== 'password' &&
+    fieldName !== 'passwordConfirm'
   ) {
     return <GreenCheck style={styles.inputFieldIcon} />;
   }

@@ -14,8 +14,6 @@ export function FormPasswordInput({
     fieldState.isDirty && fieldState.isTouched
       ? fieldState.invalid
         ? styles.incorrectInput
-        : field.name === 'passwordConfirm'
-        ? styles.correctInput
         : undefined
       : undefined;
 

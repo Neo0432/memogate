@@ -77,7 +77,7 @@ export function RegistrationForm({errors}: IFormProps) {
                 fieldState.isDirty && fieldState.isTouched
                   ? fieldState.error
                     ? styles.incorrectInput
-                    : styles.correctInput
+                    : undefined
                   : undefined
               }
             />
