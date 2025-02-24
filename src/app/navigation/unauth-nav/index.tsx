@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {Registration} from '@screens/sign-up';
 import {UnAuthorizedLayout} from '@app/navigation/layout';
+import {SignIn} from '@screens/sign-in';
 
 export type UnAuthNavStackParams = {
   Login: undefined;
@@ -15,7 +16,7 @@ export function UnAuthorizedNavigator() {
       screenOptions={{headerShown: false}}
       initialRouteName="Registration"
       screenLayout={UnAuthorizedLayout}>
-      <Stack.Screen name="Login" component={() => <></>} />
+      <Stack.Screen name="Login" component={() => <SignIn />} />
       <Stack.Screen name="Registration" component={() => <Registration />} />
     </Stack.Navigator>
   );
