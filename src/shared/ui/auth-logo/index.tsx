@@ -2,7 +2,6 @@ import {styles} from './style';
 import {Text, View} from 'react-native';
 import AuthLogoImage from '@/shared/assets/images/auth-logo/auth-logo-img.svg';
 export function AuthLogo() {
-  console.log('image');
   return (
     <View style={styles.layout}>
       <View style={styles.container}>

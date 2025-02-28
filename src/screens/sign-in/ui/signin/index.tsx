@@ -1,4 +1,4 @@
-import {FormProvider, useForm} from 'react-hook-form';
+import {FormProvider, SubmitHandler, useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {schema} from '@screens/sign-in/model/schema';
 import {
@@ -13,6 +13,8 @@ import {styles} from './style';
 import {AuthLogo} from '@shared/ui/auth-logo';
 import {SignInForm} from '@screens/sign-in/ui/form';
 import {ButtonsArea} from '@screens/sign-up/ui/buttons-area';
+import {signInUser} from '@entities/user/model/actions.ts';
+import {useAppDispatch} from '@shared/store';
 
 export interface IFormInput {
   email: string;
@@ -20,6 +22,7 @@ export interface IFormInput {
 }
 
 export default function SignIn() {
+  const dispatch = useAppDispatch();
   const methods = useForm<IFormInput>({
     resolver: yupResolver(schema),
     mode: 'onChange',
@@ -32,8 +35,12 @@ export default function SignIn() {
 
   const {
     handleSubmit,
-    formState: {errors, isValid, isSubmitting},
+    formState: {isValid, isSubmitting},
   } = methods;
+
+  const onSubmit: SubmitHandler<IFormInput> = data => {
+    dispatch(signInUser(data));
+  };
 
   return (
     <KeyboardAvoidingView
@@ -53,7 +60,7 @@ export default function SignIn() {
             <ButtonsArea
               isValid={isValid}
               isSubmitting={isSubmitting}
-              onSubmit={() => handleSubmit}
+              onSubmit={handleSubmit(onSubmit)}
             />
           </View>
         </View>

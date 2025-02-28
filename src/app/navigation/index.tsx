@@ -2,6 +2,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {UnAuthorizedNavigator} from '@app/navigation/unauth-nav';
 import {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {useAppSelector} from '@shared/store';
+import {selectIsLoggedIn} from '@entities/user/model/selectors.ts';
 
 export type NavigationType = {
   Unauthorized: undefined;
@@ -11,7 +13,7 @@ export type NavigationType = {
 const Stack = createStackNavigator<NavigationType>();
 
 export function Navigation() {
-  const [isAuthorized, setIsAuthorized] = useState(false);
+  const isAuthorized = useAppSelector(selectIsLoggedIn);
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>

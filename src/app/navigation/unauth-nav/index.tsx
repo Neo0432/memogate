@@ -16,8 +16,8 @@ export function UnAuthorizedNavigator() {
       screenOptions={{headerShown: false}}
       initialRouteName="Registration"
       screenLayout={UnAuthorizedLayout}>
-      <Stack.Screen name="Login" component={() => <SignIn />} />
-      <Stack.Screen name="Registration" component={() => <Registration />} />
+      <Stack.Screen name="Login" component={<SignIn />} />
+      <Stack.Screen name="Registration" component={<Registration />} />
     </Stack.Navigator>
   );
 }

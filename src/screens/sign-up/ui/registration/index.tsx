@@ -8,11 +8,13 @@ import {
 } from 'react-native';
 import {styles} from './style';
 import {AuthLogo} from '@shared/ui/auth-logo';
-import {FormProvider, useForm} from 'react-hook-form';
+import {FormProvider, SubmitHandler, useForm} from 'react-hook-form';
 import {schema} from '../../model/schema';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {RegistrationForm} from '@screens/sign-up/ui/form';
 import {ButtonsArea} from '@screens/sign-up/ui/buttons-area';
+import {useAppDispatch} from '@shared/store';
+import {signUpUser} from '@entities/user/model/actions.ts';
 
 export interface IFormInput {
   name: string;
@@ -22,6 +24,7 @@ export interface IFormInput {
 }
 
 export default function Registration() {
+  const dispatch = useAppDispatch();
   const methods = useForm<IFormInput>({
     resolver: yupResolver(schema),
     mode: 'onChange',
@@ -38,6 +41,12 @@ export default function Registration() {
     handleSubmit,
     formState: {errors, isValid, isSubmitting},
   } = methods;
+
+  const onSubmit: SubmitHandler<IFormInput> = data => {
+    dispatch(
+      signUpUser({name: data.name, email: data.email, password: data.password}),
+    );
+  };
 
   return (
     <KeyboardAvoidingView
@@ -57,7 +66,7 @@ export default function Registration() {
             <ButtonsArea
               isValid={isValid}
               isSubmitting={isSubmitting}
-              onSubmit={() => handleSubmit}
+              onSubmit={handleSubmit(onSubmit)}
             />
           </View>
         </View>
