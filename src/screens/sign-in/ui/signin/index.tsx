@@ -12,7 +12,7 @@ import {
 import {styles} from './style';
 import {AuthLogo} from '@shared/ui/auth-logo';
 import {SignInForm} from '@screens/sign-in/ui/form';
-import {ButtonsArea} from '@screens/sign-up/ui/buttons-area';
+import {ButtonsArea} from '@screens/sign-in/ui/buttons-area';
 import {signInUser} from '@entities/user/model/actions.ts';
 import {useAppDispatch} from '@shared/store';
 
@@ -45,7 +45,7 @@ export default function SignIn() {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'height' : 'height'}
-      keyboardVerticalOffset={-64}
+      keyboardVerticalOffset={-66}
       style={styles.keyboardAvoidingViewContainer}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.pageContainer}>

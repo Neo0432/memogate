@@ -51,7 +51,7 @@ export default function Registration() {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'height' : 'height'}
-      keyboardVerticalOffset={-64}
+      keyboardVerticalOffset={-66}
       style={styles.keyboardAvoidingViewContainer}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.pageContainer}>
