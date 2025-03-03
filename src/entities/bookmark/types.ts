@@ -13,3 +13,10 @@ export interface IBookmarkCreateDTO {
   title: string;
   description: string;
 }
+
+export interface IBookmarkUpdateDTO {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+}

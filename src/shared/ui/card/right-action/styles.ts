@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
     borderBottomRightRadius: 24,
     paddingRight: 16,
     paddingVertical: 28,
-    // backgroundColor: colors.additional.error,
   },
 
   actionContainer: {

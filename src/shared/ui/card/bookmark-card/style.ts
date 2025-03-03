@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors, typography} from '@shared/ui/uikit';
+import {colors, effects, typography} from '@shared/ui/uikit';
 
 export const styles = StyleSheet.create({
   content: {
@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
     paddingRight: 8,
     borderRadius: 20,
     backgroundColor: colors.grayscale.color100,
+    ...effects.shadow2,
   },
   title: {
     ...typography.H_2_Medium_18pt,

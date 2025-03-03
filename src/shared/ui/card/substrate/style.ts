@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '@shared/ui/uikit';
+import {colors, effects} from '@shared/ui/uikit';
 
 export const styles = StyleSheet.create({
   card: {
@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     minHeight: 72,
     backgroundColor: colors.grayscale.color100,
+    ...effects.shadow2,
   },
 
   containerStyle: {

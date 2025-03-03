@@ -5,6 +5,8 @@ export const styles = StyleSheet.create({
     position: 'relative',
     gap: 24,
     flex: 1,
+    paddingTop: 4,
+    paddingInline: 16,
   },
   bookmarksContainer: {
     flexDirection: 'column',

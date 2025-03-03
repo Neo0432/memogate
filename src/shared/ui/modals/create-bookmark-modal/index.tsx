@@ -14,7 +14,6 @@ import {styles} from './style';
 import {CustomTextInput} from '@shared/ui/text-inputs';
 import {Controller, useForm} from 'react-hook-form';
 import {UIButtonWithLoading, UICloseButton} from '@shared/ui/buttons';
-import {useDispatch} from 'react-redux';
 import {createBookmark} from '@entities/bookmark/model/actions.ts';
 import {selectUser} from '@entities/user/model/selectors.ts';
 import {useAppDispatch, useAppSelector} from '@shared/store';

@@ -6,7 +6,7 @@ import {
   selectUserBookmarks,
 } from '@entities/user/model/selectors.ts';
 import {IBookmark} from '@entities/bookmark/types.ts';
-import {useFocusEffect} from '@react-navigation/native';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {useCallback, useState} from 'react';
 import {
   deleteBookmark,
@@ -18,10 +18,13 @@ import {styles} from './style';
 import {UIAddButton} from '@shared/ui/buttons';
 import {NoBookmarksCreated} from '@shared/ui/no-data-components';
 import {CreateBookmarkModal} from '@shared/ui/modals';
-import {PreviewWebsiteImage} from '@screens/bookmark/ui/preview-url-image';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {BookmarkStackNavigatorProps} from '@app/navigation/auth-nav/bookmarks-stack';
 
 export function BookmarksList() {
   const panGesture = Gesture.Pan();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<BookmarkStackNavigatorProps>>();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -48,7 +51,12 @@ export function BookmarksList() {
                   Vibration.vibrate([0, 80, 20, 10]);
                   dispatch(deleteBookmark(bookmark.id));
                 }}
-                onPress={() => Vibration.vibrate([1, 10, 80, 50])}
+                onPress={() => {
+                  Vibration.vibrate([1, 10, 80, 50]);
+                  navigation.navigate('BookmarksCard', {
+                    bookmarkId: bookmark.id,
+                  });
+                }}
                 key={bookmark.id}
               />
             ))}

@@ -1,12 +1,10 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {UnAuthorizedNavigator} from '@app/navigation/unauth-nav';
-import {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {useAppSelector} from '@shared/store';
 import {selectIsLoggedIn} from '@entities/user/model/selectors.ts';
 import {AuthorizedNavigator} from '@app/navigation/auth-nav';
-import changeNavigationBarColor from 'react-native-navigation-bar-color';
-import {colors} from '@shared/ui/uikit';
+import {ScreenLayout} from '@app/navigation/layout';
 
 export type NavigationType = {
   Unauthorized: undefined;
@@ -20,7 +18,9 @@ export function Navigation() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}}
+        screenLayout={ScreenLayout}>
         {!isAuthorized ? (
           <Stack.Screen name="Unauthorized" component={UnAuthorizedNavigator} />
         ) : (

@@ -6,6 +6,7 @@ import {
   createBookmark,
   deleteBookmark,
   fetchUserBookmarks,
+  updateBookmark,
 } from '@entities/bookmark/model/actions.ts';
 
 const initialState: IUserState = {
@@ -45,6 +46,16 @@ const userSlice = createSlice({
       })
       .addCase(createBookmark.fulfilled, (state, action) => {
         state.bookmarks.push(action.payload);
+      })
+      .addCase(updateBookmark.fulfilled, (state, action) => {
+        const index = state.bookmarks.findIndex(
+          bookmark => bookmark.id === action.payload.id,
+        );
+
+        if (index !== -1) {
+          console.log(index);
+          state.bookmarks[index] = action.payload;
+        }
       })
       .addCase(deleteBookmark.fulfilled, (state, action) => {
         state.bookmarks = state.bookmarks.filter(

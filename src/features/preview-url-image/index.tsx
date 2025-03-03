@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Image, View} from 'react-native';
-import {getWebsitePreview} from '@screens/bookmark/ui/preview-url-image/lib';
+import {getWebsitePreview} from './get-website-preview';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {styles} from './style';
 
@@ -13,6 +13,7 @@ export function PreviewWebsiteImage({url}: {url: string}) {
 
   useEffect(() => {
     const getPreview = async () => {
+      if (!url) return;
       const preview = await getWebsitePreview(url);
       console.log('Preview data:', preview);
       setPreviewImage(preview);
