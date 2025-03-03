@@ -4,7 +4,7 @@ import {styles} from './styles';
 import {UIRoundedButton} from '@/shared/ui/buttons';
 import {typography} from '@/shared/ui/uikit';
 
-export default function PrayerTabHeader({
+export default function BookmarkTabHeader({
   title,
   onGoBack,
 }: {

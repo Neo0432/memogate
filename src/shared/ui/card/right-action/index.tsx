@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import TrashIcon from '@/shared/assets/icons/sweapable/Trash.svg';
+import TrashIcon from '@shared/assets/icons/sweapable/trash.svg';
 import Animated, {
   interpolate,
   SharedValue,

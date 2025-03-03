@@ -1,6 +1,6 @@
 import {colors} from '@shared/ui/uikit';
-import BookmarksIcon from '@shared/assets/icons/navigation/BookmarksIcon.svg';
-import SearchIcon from '@shared/assets/icons/navigation/SearchIcon.svg';
+import BookmarksIcon from '@shared/assets/icons/navigation/bookmarks-icon.svg';
+import SearchIcon from '@shared/assets/icons/navigation/search-icon.svg';
 
 export function Bookmarks({focused, size}: any): JSX.Element {
   return (

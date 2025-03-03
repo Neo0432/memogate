@@ -1,6 +1,6 @@
 import {StackHeaderProps} from '@react-navigation/stack';
 import {getHeaderTitle} from '@react-navigation/elements';
-import {PrayerTabHeader} from '@/shared/ui/headers';
+import {BookmarkTabHeader} from '@shared/ui/headers';
 
 export function BookmarkCardHeader({
   route,
@@ -11,7 +11,7 @@ export function BookmarkCardHeader({
   const title = getHeaderTitle(options, route.name);
   return (
     back && (
-      <PrayerTabHeader
+      <BookmarkTabHeader
         title={title}
         onGoBack={() => {
           navigation.goBack();

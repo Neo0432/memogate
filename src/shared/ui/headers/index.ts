@@ -1,1 +1,1 @@
-export {default as PrayerTabHeader} from './prayer-header';
+export {default as BookmarkTabHeader} from './bookmark-header';

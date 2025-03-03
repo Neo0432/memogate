@@ -4,6 +4,7 @@ import {ScreenLayoutSafeArea} from '@app/navigation/layout';
 import {colors, typography} from '@shared/ui/uikit';
 import {styles} from './style';
 import {Bookmarks, Search} from '@app/navigation/ui/tab-icons';
+import {SearchNavigator} from '@app/navigation/auth-nav/search-stack';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,12 +23,12 @@ export function AuthorizedNavigator() {
       <Tab.Screen
         name="BookmarksScreen"
         options={{title: 'Bookmarks', tabBarIcon: Bookmarks}}
-        component={() => <BookmarkNavigator />}
+        component={BookmarkNavigator}
       />
       <Tab.Screen
         name="Search"
         options={{tabBarIcon: Search}}
-        component={() => <></>}
+        component={SearchNavigator}
       />
     </Tab.Navigator>
   );
