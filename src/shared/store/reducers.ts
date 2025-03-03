@@ -2,18 +2,11 @@ import {combineReducers} from 'redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 import userReducer from '@entities/user/model/slice';
-// import {deskReducer, myDeskReducer} from '@entities/desk/model/slice';
-// import columnReducer from '@entities/column/model/slice';
-// import prayerReducer from '@entities/prayer/model/slice';
-// import networkReducer from '@shared/network/model/slice.ts';
+import bookmarkReducer from '@entities/bookmark/model/slice';
 
 const combineReducer = combineReducers({
   user: userReducer,
-  // usersDesks: deskReducer,
-  // myDesk: myDeskReducer,
-  // columns: columnReducer,
-  // prayers: prayerReducer,
-  // network: networkReducer,
+  bookmark: bookmarkReducer,
 });
 
 const persistConfig = {key: 'root', storage: AsyncStorage, whitelist: ['user']};

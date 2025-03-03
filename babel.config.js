@@ -9,6 +9,7 @@ module.exports = {
           '@': './src',
           '@app': './src/app',
           '@entities': './src/entities',
+          '@features': './src/features',
           '@screens': './src/screens',
           '@shared': './src/shared',
         },
@@ -27,5 +28,6 @@ module.exports = {
         verbose: false,
       },
     ],
+    'react-native-reanimated/plugin',
   ],
 };
