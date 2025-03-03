@@ -7,9 +7,11 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import changeNavigationBarColor from 'react-native-navigation-bar-color';
 import {colors} from '@shared/ui/uikit';
 import {PortalProvider} from '@gorhom/portal';
+import {GetShareFrom} from '@features/share-from';
 
 export function App(): JSX.Element {
   changeNavigationBarColor(colors.grayscale.color100);
+
   return (
     <ReduxProvider>
       <PortalProvider>
@@ -21,6 +23,7 @@ export function App(): JSX.Element {
               barStyle="dark-content"
             />
             <Navigation />
+            <GetShareFrom />
           </GestureHandlerRootView>
         </SafeAreaProvider>
       </PortalProvider>

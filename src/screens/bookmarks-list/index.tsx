@@ -20,6 +20,7 @@ import {NoBookmarksCreated} from '@shared/ui/no-data-components';
 import {CreateBookmarkModal} from '@shared/ui/modals';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BookmarkStackNavigatorProps} from '@app/navigation/auth-nav/bookmarks-stack';
+import {GetShareFrom} from '@features/share-from';
 
 export function BookmarksList() {
   const panGesture = Gesture.Pan();
@@ -75,6 +76,7 @@ export function BookmarksList() {
       />
 
       {isModalOpen && <CreateBookmarkModal setIsModalOpen={setIsModalOpen} />}
+      <GetShareFrom />
     </View>
   );
 }
