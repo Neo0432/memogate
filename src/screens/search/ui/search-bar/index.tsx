@@ -27,7 +27,7 @@ export function SearchBar({
       setSearchResult([]);
       return;
     }
-
+    if (bookmarks.length === 0) return;
     const result = bookmarks.filter(item => {
       const titleMatch = item.title.toLowerCase().includes(searchQuery);
       const descriptionMatch = item.description
@@ -50,6 +50,7 @@ export function SearchBar({
               value={value}
               onChangeText={onChange}
               onBlur={onBlur}
+              onSubmitEditing={handleSubmit(onSubmit)}
               placeholderTextColor={colors.grayscale.color600}
               style={styles.searchTextInput}
               placeholder="Search something"

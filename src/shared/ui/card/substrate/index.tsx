@@ -4,6 +4,7 @@ import Swipeable, {
 } from 'react-native-gesture-handler/ReanimatedSwipeable';
 import {SharedValue} from 'react-native-reanimated';
 import {styles} from './style';
+import {Vibration} from 'react-native';
 
 export interface CardProps {
   onSwipe?: () => void;
@@ -18,6 +19,7 @@ export default function Card({
   const swipeableView = useRef<SwipeableMethods>(null);
   return (
     <Swipeable
+      onSwipeableCloseStartDrag={() => Vibration.vibrate([0, 10])}
       containerStyle={styles.containerStyle}
       ref={swipeableView}
       renderRightActions={(progress: SharedValue<number>) =>

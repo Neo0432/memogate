@@ -2,13 +2,14 @@ import {configureStore} from '@reduxjs/toolkit';
 import {persistStore} from 'redux-persist';
 import {useDispatch, useSelector} from 'react-redux';
 import {persistedReducer} from './reducers';
+import {bookmarksApi} from '@entities/bookmark/api';
 
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }),
+    }).concat(bookmarksApi.middleware),
 });
 
 export const persistor = persistStore(store);

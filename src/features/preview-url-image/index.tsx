@@ -4,7 +4,7 @@ import {getWebsitePreview} from './get-website-preview';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {styles} from './style';
 
-export function PreviewWebsiteImage({url}: {url: string}) {
+export function PreviewWebsiteImage({url}: {url?: string}) {
   const [previewImage, setPreviewImage] = useState<{
     title: string;
     description: string;
@@ -30,7 +30,7 @@ export function PreviewWebsiteImage({url}: {url: string}) {
         </SkeletonPlaceholder>
       ) : (
         <Image
-          source={{uri: previewImage.image}}
+          source={{uri: previewImage?.image}}
           style={styles.imageContainer}
         />
       )}

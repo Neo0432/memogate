@@ -1,5 +1,4 @@
 import {
-  Button,
   Keyboard,
   Modal,
   Text,
@@ -14,18 +13,17 @@ import {styles} from './style';
 import {CustomTextInput} from '@shared/ui/text-inputs';
 import {Controller, useForm} from 'react-hook-form';
 import {UIButtonWithLoading, UICloseButton} from '@shared/ui/buttons';
-import {createBookmark} from '@entities/bookmark/model/actions.ts';
 import {selectUser} from '@entities/user/model/selectors.ts';
-import {useAppDispatch, useAppSelector} from '@shared/store';
+import {useAppSelector} from '@shared/store';
 import {IBookmarkCreateDTO} from '@entities/bookmark/types.ts';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {useCreateBookmarkMutation} from '@entities/bookmark/api';
 
 export default function CreateBookmarkModal({
   setIsModalOpen,
 }: {
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 }) {
-  const dispatch = useAppDispatch();
   const user = useAppSelector(selectUser);
   interface FormData {
     title: string;
@@ -48,9 +46,11 @@ export default function CreateBookmarkModal({
     reset,
   } = methods;
 
+  const [createBookmark] = useCreateBookmarkMutation();
+
   const onSubmit = async (data: FormData) => {
     const createBookmarkData: IBookmarkCreateDTO = {...data, userId: user.id};
-    dispatch(createBookmark(createBookmarkData));
+    createBookmark(createBookmarkData);
 
     reset();
     Vibration.vibrate([0, 5, 10, 100]);

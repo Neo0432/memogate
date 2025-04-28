@@ -6,10 +6,9 @@ export const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     gap: 2,
-    height: 105,
+    height: 84,
     paddingInline: 20,
     paddingTop: 12,
-    paddingBottom: 36,
 
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,

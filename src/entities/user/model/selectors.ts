@@ -17,8 +17,3 @@ export const selectIsLoggedIn = createSelector(
   [selectUserState],
   (userState: IUserState) => userState.isLoggedIn,
 );
-
-export const selectUserBookmarks = createSelector(
-  [selectUserState],
-  (userState: IUserState) => userState.bookmarks,
-);
