@@ -11,6 +11,7 @@ import {ButtonsArea} from '../buttons-area';
 export function RegistrationForm() {
   const methods = useSignUpForm();
   const {
+    control,
     handleSubmit,
     formState: {errors, isValid, isSubmitting},
   } = methods;
@@ -21,6 +22,7 @@ export function RegistrationForm() {
       <View style={styles.form}>
         <Text style={styles.headerText}>Sign up</Text>
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormTextInputWithCheck
@@ -35,6 +37,7 @@ export function RegistrationForm() {
           name="name"
         />
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormTextInputWithCheck
@@ -50,6 +53,7 @@ export function RegistrationForm() {
           name="email"
         />
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormPasswordInput
@@ -72,6 +76,7 @@ export function RegistrationForm() {
           name="password"
         />
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormPasswordInput

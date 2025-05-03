@@ -3,11 +3,12 @@ import {IBookmarkOpenedFormData} from '@features/bookmark/bookmark-opened-form/m
 import {IBookmark} from '@entities/bookmark/types.ts';
 
 export const useBookmarkOpenedForm = ({bookmark}: {bookmark?: IBookmark}) => {
+  console.log(bookmark);
   return useForm<IBookmarkOpenedFormData>({
     defaultValues: {
-      title: bookmark?.title,
-      description: bookmark?.description,
-      url: bookmark?.url,
+      title: bookmark?.title || '',
+      description: bookmark?.description || '',
+      url: bookmark?.url || '',
     },
   });
 };

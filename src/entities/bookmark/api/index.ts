@@ -17,6 +17,8 @@ export const bookmarksApi = createApi({
   tagTypes: ['Bookmarks', 'SelectedBookmark'],
   refetchOnReconnect: true,
   baseQuery: baseQueryWithAuth,
+  keepUnusedDataFor: 86400,
+
   endpoints: build => ({
     getAllBookmarks: build.query<IBookmark[], void>({
       query: () => `/bookmarks`,

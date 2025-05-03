@@ -3,6 +3,7 @@ import {IBookmark} from '@entities/bookmark/types.ts';
 import {Controller} from 'react-hook-form';
 import {TextFieldWithChangeability} from '@widgets/inputs';
 import {useBookmarkOpenedForm} from '../../hooks/use-bookmark-opened-form.ts';
+import {useEffect} from 'react';
 
 export function BookmarkOpenedForm({
   bookmark,
@@ -13,7 +14,11 @@ export function BookmarkOpenedForm({
 }) {
   const methods = useBookmarkOpenedForm({bookmark});
 
-  const {control, handleSubmit} = methods;
+  const {control, handleSubmit, reset} = methods;
+
+  useEffect(() => {
+    if (bookmark) reset(bookmark);
+  }, [bookmark, reset]);
 
   const onSubmit = useBookmarkSubmit({bookmark, handleSubmit});
 

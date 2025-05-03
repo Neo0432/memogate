@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {forwardRef, useState} from 'react';
 import {Text, TextInput, TouchableOpacity, Vibration, View} from 'react-native';
 import {styles} from './style';
 import {Hyperlink} from 'react-native-hyperlink';
@@ -7,14 +7,13 @@ import {SkeletonTextInputPlaceholder} from '../skeleton-text-input-placeholder';
 import {ITextFieldWithChangeabilityProps} from '../../model/types';
 import {confirmOpenUrl} from '../../lib/confirm-open-url.ts';
 
-export function TextFieldWithChangeability({
-  itemName,
-  value,
-  onSubmit,
-  onChange,
-  onBlur,
-  isLoading,
-}: ITextFieldWithChangeabilityProps) {
+export const TextFieldWithChangeability = forwardRef<
+  any,
+  ITextFieldWithChangeabilityProps
+>(function TextFieldWithChangeability(
+  {itemName, value, onSubmit, onChange, onBlur, isLoading},
+  ref,
+) {
   const [isChanging, setIsChanging] = useState(false);
 
   return (
@@ -28,6 +27,7 @@ export function TextFieldWithChangeability({
           }}>
           {isChanging ? (
             <TextInput
+              ref={ref}
               value={value}
               autoFocus={true}
               onChangeText={onChange}
@@ -48,4 +48,4 @@ export function TextFieldWithChangeability({
       )}
     </View>
   );
-}
+});

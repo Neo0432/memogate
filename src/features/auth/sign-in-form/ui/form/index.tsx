@@ -10,6 +10,7 @@ import {styles} from './style';
 export function SignInForm() {
   const methods = useSignInForm();
   const {
+    control,
     handleSubmit,
     formState: {isValid, isSubmitting},
   } = methods;
@@ -21,6 +22,7 @@ export function SignInForm() {
       <View style={styles.form}>
         <Text style={styles.headerText}>Sign in</Text>
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormTextInput
@@ -37,6 +39,7 @@ export function SignInForm() {
           name="email"
         />
         <Controller
+          control={control}
           render={({field, fieldState}) => (
             <View style={styles.inputContainer}>
               <FormPasswordInput
