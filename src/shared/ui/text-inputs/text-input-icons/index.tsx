@@ -2,7 +2,7 @@ import {ColorValue, TouchableOpacity} from 'react-native';
 import CorrectInputCheck from './assets/correct-input-check.svg';
 import EyeOpenIcon from './assets/eye-open.svg';
 import EyeClosedIcon from './assets/eye-closed.svg';
-import {PropsType, EyeToggleProps} from '@/shared/ui/text-inputs';
+import {PropsType, EyeToggleProps} from '@shared/ui/text-inputs';
 
 export default function TextInputIcons({
   type,

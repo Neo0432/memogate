@@ -1,5 +1,5 @@
 import {JSX, useState} from 'react';
-import {FormTextInput} from '@/shared/ui/form/form-text-input';
+import {FormTextInput} from '@shared/ui/form/form-text-input';
 import {RenderIcon} from '../password-input-icon';
 import {styles} from './style';
 

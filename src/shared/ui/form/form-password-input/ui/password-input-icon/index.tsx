@@ -1,5 +1,5 @@
-import {JSX, Dispatch, SetStateAction} from 'react';
-import {GreenCheck, EyeToggle} from '@/shared/ui/text-inputs/text-input-icons';
+import {JSX} from 'react';
+import {GreenCheck, EyeToggle} from '@shared/ui/text-inputs/text-input-icons';
 
 import {colors} from '@shared/styles';
 import {styles} from './style';

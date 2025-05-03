@@ -1,7 +1,7 @@
 import {JSX, useEffect, useState} from 'react';
 import {Animated} from 'react-native';
-import LoadingIndicatorPrimaryIcon from '@/shared/assets/icons/loading/load-indicator.svg';
-import LoadingIndicatorSecondaryIcon from '@/shared/assets/icons/loading/load-indicator-white.svg';
+import LoadingIndicatorPrimaryIcon from '@shared/assets/icons/loading/load-indicator.svg';
+import LoadingIndicatorSecondaryIcon from '@shared/assets/icons/loading/load-indicator-white.svg';
 
 export function LoadAnimatedIndicator({
   colorVariant,

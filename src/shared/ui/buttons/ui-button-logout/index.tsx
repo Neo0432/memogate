@@ -1,7 +1,7 @@
-import {UIRoundedButton} from '@/shared/ui/buttons';
-import LogoutIcon from '@/shared/assets/icons/buttons/logout-button/logout.svg';
-import {useAppDispatch} from '@/shared/store';
-import {logOut} from '@/entities/user/model/slice';
+import {UIRoundedButton} from '@shared/ui/buttons';
+import LogoutIcon from '@shared/assets/icons/buttons/logout-button/logout.svg';
+import {useAppDispatch} from '@shared/store';
+import {logOut} from '@entities/user/model/slice';
 import {styles} from './styles';
 import {ActionSheetIOS, Platform, Vibration} from 'react-native';
 

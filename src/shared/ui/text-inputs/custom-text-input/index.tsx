@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {TextInput, View} from 'react-native';
 import {colors, typography} from '@shared/styles';
-import {ITextInputProps} from '@/shared/ui/text-inputs';
+import {ITextInputProps} from '@shared/ui/text-inputs';
 import {styles} from './styles';
 
 export default function CustomTextInput({

@@ -1,7 +1,7 @@
 import {JSX} from 'react';
 import {Text} from 'react-native';
-import {UIButtonWithLoading} from '@/shared/ui/buttons';
-import {IButtonWithTextProps} from '@/shared/ui/buttons';
+import {UIButtonWithLoading} from '@shared/ui/buttons';
+import {IButtonWithTextProps} from '@shared/ui/buttons';
 
 export default function UiButtonWithText({
   children,
