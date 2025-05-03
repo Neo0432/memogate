@@ -1,7 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BookmarkNavigator} from '@app/navigation/auth-nav/bookmarks-stack';
 import {ScreenLayoutSafeArea} from '@app/navigation/layout';
-import {colors, typography} from '@shared/ui/uikit';
+import {colors, typography} from '@shared/styles';
 import {styles} from './style';
 import {Bookmarks, Search} from '@app/navigation/ui/tab-icons';
 import {SearchNavigator} from '@app/navigation/auth-nav/search-stack';

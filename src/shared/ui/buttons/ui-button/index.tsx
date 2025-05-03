@@ -1,6 +1,6 @@
 import {JSX} from 'react';
 import {Pressable} from 'react-native';
-import {ICustomButtonProps} from '@/shared/ui/buttons';
+import {ICustomButtonProps} from '@shared/ui/buttons';
 
 export default function UIButton({
   style = {},

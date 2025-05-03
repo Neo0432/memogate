@@ -1,5 +1,5 @@
 import {createSelector} from '@reduxjs/toolkit';
-import {RootState} from '@/shared/store';
+import {RootState} from '@shared/store';
 import {IUserState} from '../types';
 
 export const selectUserState = createSelector(
@@ -16,9 +16,4 @@ export const selectUser = createSelector(
 export const selectIsLoggedIn = createSelector(
   [selectUserState],
   (userState: IUserState) => userState.isLoggedIn,
-);
-
-export const selectUserBookmarks = createSelector(
-  [selectUserState],
-  (userState: IUserState) => userState.bookmarks,
 );

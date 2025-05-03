@@ -1,1 +1,1 @@
-export {default as CreateBookmarkModal} from './create-bookmark-modal';
+export {ModalBase} from './modal-base';

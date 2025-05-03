@@ -1,5 +1,5 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
-import {authClient, privateClient} from '@shared/api/clients.ts';
+import {authClient} from '@shared/api/clients.ts';
 import {isAxiosError} from 'axios';
 import {IUserSighUpDTO, IUserSignInDTO} from '@entities/user/types.ts';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -16,6 +16,7 @@ export const signUpUser = createAsyncThunk(
     } catch (e) {
       if (isAxiosError(e)) {
         console.log(`[ERROR] Cant create user: ${e.message}`);
+        console.log(e.config);
       }
       return rejectWithValue(e);
     }
@@ -25,11 +26,9 @@ export const signUpUser = createAsyncThunk(
 export const signInUser = createAsyncThunk(
   'users/signInUser',
   async (userData: IUserSignInDTO, {rejectWithValue}) => {
-    console.log('SIUUU');
     console.log(userData);
     try {
       const response = await authClient.post('/auth/signin', userData);
-      console.log('aaa');
       console.log(response.data);
       await AsyncStorage.setItem('user_token', response?.data.token);
 
@@ -39,7 +38,6 @@ export const signInUser = createAsyncThunk(
         console.log(`[ERROR] Cant auth user: ${e.message}`);
         console.log(e.response);
       }
-      // console.log(`[ERROR] Cant login user: ${e}`);
       return rejectWithValue(e);
     }
   },

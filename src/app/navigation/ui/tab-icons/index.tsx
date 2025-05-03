@@ -1,4 +1,4 @@
-import {colors} from '@shared/ui/uikit';
+import {colors} from '@shared/styles';
 import BookmarksIcon from '@shared/assets/icons/navigation/bookmarks-icon.svg';
 import SearchIcon from '@shared/assets/icons/navigation/search-icon.svg';
 

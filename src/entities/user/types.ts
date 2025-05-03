@@ -19,6 +19,5 @@ export interface IUserSighUpDTO extends IUserSignInDTO {
 
 export interface IUserState {
   user: IUser;
-  bookmarks: IBookmark[];
   isLoggedIn: boolean;
 }

@@ -1,6 +1,6 @@
 import {styles} from './styles';
-import PlusIcon from '@/shared/assets/icons/buttons/plus-button/plus-icon.svg';
-import {UIRoundedButton} from '@/shared/ui/buttons';
+import PlusIcon from '@shared/assets/icons/buttons/plus-button/plus-icon.svg';
+import {UIRoundedButton} from '@shared/ui/buttons';
 
 export default function UIAddButton({onPress}: {onPress: () => void}) {
   return (

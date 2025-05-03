@@ -1,4 +1,4 @@
-import {colors} from '@/shared/ui/uikit';
+import {colors} from '@shared/styles';
 
 export function getTextStyleColor(disabled?: boolean) {
   const textStyleInitial = {

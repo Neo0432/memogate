@@ -1,8 +1,8 @@
 import {View, Text} from 'react-native';
-import LeftArrowIcon from '@/shared/assets/icons/buttons/left-arrow-button/left-arrow.svg';
+import LeftArrowIcon from '@shared/assets/icons/buttons/left-arrow-button/left-arrow.svg';
 import {styles} from './styles';
-import {UIRoundedButton} from '@/shared/ui/buttons';
-import {typography} from '@/shared/ui/uikit';
+import {UIRoundedButton} from '@shared/ui/buttons';
+import {typography} from '@shared/styles';
 
 export default function BookmarkTabHeader({
   title,

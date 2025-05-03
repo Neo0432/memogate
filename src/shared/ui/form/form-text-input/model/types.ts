@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import {ITextInputProps} from '@/shared/ui/text-inputs';
+import {ITextInputProps} from '@shared/ui/text-inputs';
 import {ControllerFieldState} from 'react-hook-form';
 
 export interface IFormTextInputProps extends ITextInputProps {

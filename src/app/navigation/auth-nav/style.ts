@@ -1,15 +1,14 @@
 import {StyleSheet} from 'react-native';
-import {colors, effects} from '@shared/ui/uikit';
+import {colors, effects} from '@shared/styles';
 
 export const styles = StyleSheet.create({
   tabBarStyle: {
     display: 'flex',
     flexDirection: 'row',
     gap: 2,
-    height: 105,
+    height: 84,
     paddingInline: 20,
     paddingTop: 12,
-    paddingBottom: 36,
 
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,

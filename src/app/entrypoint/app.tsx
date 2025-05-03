@@ -5,7 +5,7 @@ import {Navigation} from '@app/navigation';
 import {ReduxProvider} from '@app/providers/redux-provider';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import changeNavigationBarColor from 'react-native-navigation-bar-color';
-import {colors} from '@shared/ui/uikit';
+import {colors} from '@shared/styles';
 import {PortalProvider} from '@gorhom/portal';
 import {GetShareFrom} from '@features/share-from';
 

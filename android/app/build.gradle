@@ -92,6 +92,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+              storeFile file('memogate-release-key.keystore')
+              storePassword 'Lukpfol846524251'
+                keyAlias 'memogate-release-key'
+                keyPassword 'Lukpfol846524251'
+            }
     }
     buildTypes {
         debug {
@@ -103,6 +109,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
 }

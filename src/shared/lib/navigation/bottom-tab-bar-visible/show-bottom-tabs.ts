@@ -1,4 +1,4 @@
-import {effects} from '@/shared/ui/uikit';
+import {effects} from '@shared/styles';
 
 export default function ShowBottomTabs(navigator: any) {
   if (!navigator) return;

@@ -2,7 +2,6 @@ import {useEffect} from 'react';
 import {AppState, Linking} from 'react-native';
 
 export function GetShareFrom() {
-  console.log('a');
   useEffect(() => {
     const handleUrl = (event: {url: string}) => {
       console.log('🔗 URL получен:', event.url);

@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {ScreenLayout} from '@app/navigation/layout';
-import {BookmarksList} from '@screens/bookmarks-list';
+import {BookmarksListScreen} from '@screens/tab-screens';
 import {BookmarkScreen} from '@screens/bookmark';
 import {BookmarkCardHeader} from '@app/navigation/ui/headers/bookmark-card-header';
 
@@ -17,7 +17,7 @@ export function BookmarkNavigator() {
       initialRouteName="BookmarksScreen"
       screenOptions={{headerShown: false}}
       screenLayout={ScreenLayout}>
-      <Stack.Screen name="BookmarksScreen" component={BookmarksList} />
+      <Stack.Screen name="BookmarksScreen" component={BookmarksListScreen} />
       <Stack.Screen
         name="BookmarksCard"
         options={{

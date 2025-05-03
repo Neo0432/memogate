@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {TextInput, View} from 'react-native';
-import {colors, typography} from '@/shared/ui/uikit';
-import {ITextInputProps} from '@/shared/ui/text-inputs';
+import {colors, typography} from '@shared/styles';
+import {ITextInputProps} from '@shared/ui/text-inputs';
 import {styles} from './styles';
 
 export default function CustomTextInput({
@@ -12,6 +12,7 @@ export default function CustomTextInput({
   isSecured = true,
   customStyles,
   renderTop,
+  multiline,
   children,
 }: ITextInputProps): JSX.Element {
   const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -33,6 +34,7 @@ export default function CustomTextInput({
             customStyles ? customStyles : null,
             isFocused ? {color: colors.grayscale.color800} : {},
           ]}
+          multiline={multiline}
           onChangeText={onChangeText}
           onBlur={() => {
             onBlur ? onBlur() : null;

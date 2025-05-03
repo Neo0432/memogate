@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {hideBottomTabs, showBottomTabs} from '@/shared/lib/navigation';
+import {hideBottomTabs, showBottomTabs} from '@shared/lib/navigation';
 import {NavigationProp, NavigationState} from '@react-navigation/native';
 
 export default function ToggleBottomTabs(

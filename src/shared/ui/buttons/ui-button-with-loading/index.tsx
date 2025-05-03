@@ -1,8 +1,8 @@
 import {JSX, PropsWithChildren, useState} from 'react';
-import {UIButton} from '@/shared/ui/buttons';
-import {getButtonStyle, buttonStyle} from '@/shared/ui/buttons/button-styles';
+import {UIButton} from '@shared/ui/buttons';
+import {getButtonStyle, buttonStyle} from '@shared/ui/buttons/button-styles';
 import {LoadAnimatedIndicator} from './loading-indicator';
-import {IButtonWithLoadingProps} from '@/shared/ui/buttons';
+import {IButtonWithLoadingProps} from '@shared/ui/buttons';
 
 export default function UIButtonWithLoading({
   size,

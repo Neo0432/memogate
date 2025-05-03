@@ -1,7 +1,7 @@
 import {ReactNode} from 'react';
 import {View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {colors} from '@/shared/ui/uikit';
+import {colors} from '@shared/styles';
 
 export function ScreenLayoutSafeArea({children}: {children: ReactNode}) {
   const insets = useSafeAreaInsets();

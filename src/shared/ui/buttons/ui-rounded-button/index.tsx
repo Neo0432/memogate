@@ -1,8 +1,5 @@
 import {PropsWithChildren} from 'react';
-import {
-  UIButtonWithLoading,
-  IButtonWithLoadingProps,
-} from '@/shared/ui/buttons';
+import {UIButtonWithLoading, IButtonWithLoadingProps} from '@shared/ui/buttons';
 import {styles} from './style';
 
 export default function UIRoundedButton({

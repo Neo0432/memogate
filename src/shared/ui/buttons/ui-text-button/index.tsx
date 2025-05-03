@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import {Text} from 'react-native';
-import {UIButton} from '@/shared/ui/buttons';
-import {ICustomTextButtonProps} from '@/shared/ui/buttons';
-import {colors} from '@/shared/ui/uikit';
+import {UIButton} from '@shared/ui/buttons';
+import {ICustomTextButtonProps} from '@shared/ui/buttons';
 import {getTextStyleColor} from './style';
 
 export default function UITextButton({
