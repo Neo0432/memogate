@@ -12,6 +12,7 @@ export interface ITextInputProps {
   customStyles?: StyleProp<TextStyle>;
   renderTop?: any;
   children?: ReactNode;
+  multiline?: boolean;
 }
 
 export interface PropsType {

@@ -20,7 +20,6 @@ export const baseQueryWithAuth: BaseQueryFn<
     const token = await AsyncStorage.getItem('user_token');
 
     if (token) {
-      console.log(token);
       if (typeof args === 'string') {
         args = {url: args};
       }

@@ -1,7 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {ScreenLayout} from '@app/navigation/layout';
-import {SearchScreen} from '@screens/search';
 import {BookmarkCardHeader} from '@app/navigation/ui/headers/bookmark-card-header';
+import {SearchScreen} from '@screens/tab-screens';
 import {BookmarkScreen} from '@screens/bookmark';
 
 export type SearchStackNavigatorProps = {

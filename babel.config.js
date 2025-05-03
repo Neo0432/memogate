@@ -11,6 +11,7 @@ module.exports = {
           '@entities': './src/entities',
           '@features': './src/features',
           '@screens': './src/screens',
+          '@widgets': './src/widgets',
           '@shared': './src/shared',
         },
       },

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '@shared/ui/uikit';
+import {colors} from '@shared/styles';
 
 export const layoutStyles = StyleSheet.create({
   layout: {

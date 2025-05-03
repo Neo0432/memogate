@@ -1,7 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import {Registration} from '@screens/sign-up';
+import {Registration, SignIn} from '@screens/auth';
 import {UnAuthorizedLayout} from '@app/navigation/layout';
-import {SignIn} from '@screens/sign-in';
 
 export type UnAuthNavStackParams = {
   Login: undefined;
