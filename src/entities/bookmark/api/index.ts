@@ -4,7 +4,7 @@ import {
   IBookmarkCreateDTO,
   IBookmarkUpdateDTO,
 } from '@entities/bookmark/types.ts';
-import {baseQueryWithAuth} from './config.ts';
+import {baseQueryWithAuth} from '@shared/api/config';
 import {
   createBookmarkQuery,
   deleteBookmarkMutation,
