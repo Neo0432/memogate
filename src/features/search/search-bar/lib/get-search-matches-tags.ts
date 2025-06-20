@@ -7,7 +7,6 @@ export const getSearchMatchesTags = (
   bookmarks: IBookmark[],
 ): IBookmark[] => {
   const filteredTags = tags.filter(tag => selectedTags.includes(tag.id));
-  console.log(filteredTags);
 
   const tagBookmarkIds = new Set<string>(
     filteredTags.flatMap(tag => tag.bookmarkIds ?? []),

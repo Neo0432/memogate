@@ -7,7 +7,6 @@ import {UISmallRoundedAddButton} from '@shared/ui/buttons';
 import {TagBarList} from '../tag-list';
 import {styles} from './style';
 import {TagSkeletonLoading} from '@features/tags/tag-bar/ui/skeleton-loading';
-import {useEffect} from 'react';
 
 export function TagBar({
   bookmarkId,
@@ -22,11 +21,8 @@ export function TagBar({
     isLoading,
   } = useGetTagsForBookmarkQuery(bookmarkId || '');
 
-  const [removeTagById, {error}] = useRemoveTagFromBookmarkMutation();
+  const [removeTagById] = useRemoveTagFromBookmarkMutation();
 
-  useEffect(() => {
-    console.log(error);
-  }, [error]);
   return (
     <View style={styles.container}>
       <TagSkeletonLoading isLoading={isFetching || isLoading}>

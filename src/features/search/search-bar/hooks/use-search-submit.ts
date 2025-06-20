@@ -23,7 +23,6 @@ export const useSearchSubmit = ({
     }
 
     if (data.tags.length > 0) {
-      console.log(data.tags);
       bookmarks = getSearchMatchesTags(tags, data.tags, bookmarks);
     }
 

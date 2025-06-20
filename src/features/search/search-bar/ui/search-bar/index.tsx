@@ -9,6 +9,7 @@ import {useSearchSubmit} from '@features/search/search-bar/hooks/use-search-subm
 import {SearchButton} from '@features/search/search-bar/ui/search-button';
 import {DropdownMultiSelect} from '@/shared/ui/dropdown/index.ts';
 import {ITagWithBookmarkLinks} from '@/entities/tag/types.ts';
+import {UISelectedDropdownItemWithIcon} from '@/shared/ui/dropdown-items/index.ts';
 
 export function SearchBar({
   bookmarks,
@@ -61,6 +62,14 @@ export function SearchBar({
               field.onBlur();
               handleSubmit(onSubmit)();
             }}
+            renderItem={(item, selected) => (
+              <UISelectedDropdownItemWithIcon
+                item={item}
+                selected={selected}
+                icon="rounded-check"
+              />
+            )}
+            maxHeight={264}
           />
         )}
         name="tags"

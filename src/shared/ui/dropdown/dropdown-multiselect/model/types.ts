@@ -13,5 +13,6 @@ export interface IDropdownFilter {
   containerStyle?: StyleProp<ViewStyle>;
   dropdownPosition?: 'auto' | 'top' | 'bottom';
   renderRightIcon?: (visible?: boolean) => JSX.Element;
+  maxHeight?: number;
   renderItem?: (item: any, selected?: Boolean) => JSX.Element;
 }
