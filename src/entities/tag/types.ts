@@ -22,3 +22,7 @@ export interface IRemoveTagDTO {
   tagId: string;
   bookmarkId: string;
 }
+
+export interface ITagWithBookmarkLinks extends ITag {
+  bookmarkIds: string[];
+}

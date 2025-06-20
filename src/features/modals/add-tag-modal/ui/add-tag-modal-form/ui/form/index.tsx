@@ -1,6 +1,6 @@
 import {Controller} from 'react-hook-form';
 import {useAddTagForm} from '../../hooks/use-add-tag-form.ts';
-import {UIDropdown} from '@shared/ui/dropdown';
+import {UIDropdownInputField} from '@shared/ui/dropdown';
 import {useGetAllTagsQuery} from '@entities/tag/model/api';
 import {UIOutlinedTextInput} from '@shared/ui/text-inputs';
 import {UIButtonWithText} from '@shared/ui/buttons';
@@ -47,7 +47,7 @@ export function AddTagModalForm({
         control={control}
         render={({field: {value, onChange}}) => (
           <>
-            <UIDropdown
+            <UIDropdownInputField
               value={value}
               data={tagsList}
               disabled={!!tagNameValue}

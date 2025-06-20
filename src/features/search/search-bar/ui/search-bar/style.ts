@@ -2,6 +2,12 @@ import {StyleSheet} from 'react-native';
 import {colors, effects, typography} from '@shared/styles';
 
 export const styles = StyleSheet.create({
+  searchAreaContainer: {
+    position: 'relative',
+    flexDirection: 'column',
+    gap: 12,
+  },
+
   container: {
     width: '100%',
     flexDirection: 'row',

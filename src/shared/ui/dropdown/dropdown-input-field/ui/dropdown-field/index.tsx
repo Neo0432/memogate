@@ -1,8 +1,8 @@
 import colors from '@shared/styles/colors';
 import {Dropdown} from 'react-native-element-dropdown';
-import {styles} from './style.ts';
+import {styles} from './style';
 
-export function UIDropdown({
+export function UIDropdownInputField({
   value,
   data,
   onChange,

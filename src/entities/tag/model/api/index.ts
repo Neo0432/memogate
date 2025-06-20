@@ -5,6 +5,7 @@ import {
   IAddTagResponseDto,
   IRemoveTagDTO,
   ITag,
+  ITagWithBookmarkLinks,
 } from '@entities/tag/types.ts';
 import {
   addTagToBookmarkQuery,
@@ -19,7 +20,7 @@ export const tagsApi = createApi({
   baseQuery: baseQueryWithAuth,
 
   endpoints: build => ({
-    getAllTags: build.query<ITag[], void>({
+    getAllTags: build.query<ITagWithBookmarkLinks[], void>({
       query: () => '/tags',
 
       providesTags: ['Tags'],
