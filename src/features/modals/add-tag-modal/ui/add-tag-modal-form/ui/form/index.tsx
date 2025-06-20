@@ -26,7 +26,9 @@ export function AddTagModalForm({
   const tagDropdownValue = watch('tagDropdown');
   const tagNameValue = watch('tagName');
 
-  const {data} = useGetAllTagsQuery();
+  const {data} = useGetAllTagsQuery(undefined, {
+    refetchOnMountOrArgChange: true,
+  });
 
   const tagsList: DropdownDataList = [{label: 'Nothing', value: ''}].concat(
     data?.map(tag => ({

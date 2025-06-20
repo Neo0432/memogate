@@ -1,14 +1,10 @@
 import {IAddTagForm} from '@features/modals/add-tag-modal/ui/add-tag-modal-form/model/types';
 import {ITag} from '@entities/tag/types.ts';
 import {useAddTagForBookmarkMutation} from '@entities/tag/model/api';
-import {useEffect} from 'react';
 
 export const useAddTagSubmit = (allTags: ITag[], bookmarkId: string) => {
   const [addTagForBookmark, {error}] = useAddTagForBookmarkMutation();
 
-  useEffect(() => {
-    console.log(error);
-  }, [error]);
   return (data: IAddTagForm) => {
     if (data.tagName)
       addTagForBookmark({name: data.tagName, bookmarkId: bookmarkId});

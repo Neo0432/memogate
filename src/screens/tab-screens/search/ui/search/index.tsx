@@ -7,9 +7,7 @@ import {useCallback, useState} from 'react';
 
 import {BookmarkListItem} from '@features/bookmark';
 import {useGetAllBookmarksQuery} from '@entities/bookmark/api';
-import {DropdownMultiSelect} from '@/shared/ui/dropdown';
 import {useGetAllTagsQuery} from '@/entities/tag/model/api';
-import {ITag} from '@entities/tag/types';
 
 export function SearchScreen() {
   const [searchResult, setSearchResult] = useState<IBookmark[]>([]);
