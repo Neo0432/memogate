@@ -8,11 +8,6 @@ import {useEffect} from 'react';
 export function PreviewWebsiteImage({url}: {url?: string}) {
   const {data: previewData, isFetching} = useGetWebsitePreviewUrl(url);
 
-  useEffect(() => {
-    console.log('Preview Website Image');
-    console.log(previewData);
-  }, [previewData]);
-
   return (
     <View style={styles.imageContainer}>
       <ImagePreviewSkeleton isFetching={isFetching}>

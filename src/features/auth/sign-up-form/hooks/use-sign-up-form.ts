@@ -1,11 +1,11 @@
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {ISignUpFormInput} from '../model/types';
-import {schema} from '../model/schema';
+import {scheme} from '../model/scheme';
 
 export const useSignUpForm = () => {
   return useForm<ISignUpFormInput>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(scheme),
     mode: 'onChange',
     criteriaMode: 'all',
     defaultValues: {

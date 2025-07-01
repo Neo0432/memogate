@@ -13,6 +13,7 @@ export interface ITextInputProps {
   renderTop?: any;
   children?: ReactNode;
   multiline?: boolean;
+  disabled?: boolean;
 }
 
 export interface PropsType {

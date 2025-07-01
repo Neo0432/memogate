@@ -4,7 +4,7 @@ import * as yup from 'yup';
 //   '^(?=.*[A-Z])(?=.*[a-z])(?=.*d).{5,}$',
 // );
 
-export const schema = yup.object().shape({
+export const scheme = yup.object().shape({
   name: yup.string().required('Name is a required'),
   email: yup.string().required('Email is a required').email(),
   password: yup

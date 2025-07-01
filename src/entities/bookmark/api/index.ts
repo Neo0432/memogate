@@ -4,7 +4,7 @@ import {
   IBookmarkCreateDTO,
   IBookmarkUpdateDTO,
 } from '@entities/bookmark/types.ts';
-import {baseQueryWithAuth} from './config.ts';
+import {baseQueryWithAuth} from '@shared/api/config';
 import {
   createBookmarkQuery,
   deleteBookmarkMutation,
@@ -14,7 +14,7 @@ import {
 
 export const bookmarksApi = createApi({
   reducerPath: 'bookmarksApi',
-  tagTypes: ['Bookmarks', 'SelectedBookmark'],
+  tagTypes: ['Bookmarks', 'SelectedBookmark', 'Tags', 'BookmarkTags'],
   refetchOnReconnect: true,
   baseQuery: baseQueryWithAuth,
   keepUnusedDataFor: 86400,
@@ -58,6 +58,7 @@ export const bookmarksApi = createApi({
 
     deleteBookmark: build.mutation<string, string>({
       query: deleteBookmarkMutation,
+      invalidatesTags: ['Tags', 'BookmarkTags'],
 
       async onQueryStarted(bookmarkId, {dispatch, queryFulfilled}) {
         const patchResult = dispatch(

@@ -7,15 +7,18 @@ import {useCallback, useState} from 'react';
 
 import {BookmarkListItem} from '@features/bookmark';
 import {useGetAllBookmarksQuery} from '@entities/bookmark/api';
+import {useGetAllTagsQuery} from '@/entities/tag/model/api';
 
 export function SearchScreen() {
   const [searchResult, setSearchResult] = useState<IBookmark[]>([]);
 
   const {data: bookmarks, isLoading, refetch} = useGetAllBookmarksQuery();
+  const {data: tags, refetch: refetchTags} = useGetAllTagsQuery();
 
   useFocusEffect(
     useCallback(() => {
       refetch();
+      refetchTags();
     }, [refetch]),
   );
 
@@ -28,8 +31,10 @@ export function SearchScreen() {
         <>
           <SearchBar
             bookmarks={bookmarks || []}
+            tags={tags || []}
             setSearchResult={setSearchResult}
           />
+
           {searchResult.length > 0 && (
             <FlatList
               data={searchResult}

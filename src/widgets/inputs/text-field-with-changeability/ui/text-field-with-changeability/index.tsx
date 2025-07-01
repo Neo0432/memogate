@@ -18,6 +18,7 @@ export const TextFieldWithChangeability = forwardRef<
 
   return (
     <View style={styles.fieldContainer}>
+      {/* TODO: переделать, вынести в отдельнй компонент типа section */}
       <Text style={styles.title}>{capitalizeFirstLetter(itemName)}</Text>
       {!isLoading ? (
         <TouchableOpacity
