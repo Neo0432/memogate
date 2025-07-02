@@ -2,7 +2,7 @@ import {ISearchFormData} from '@features/search/search-bar/model/types';
 import {Dispatch, SetStateAction} from 'react';
 import {IBookmark} from '@entities/bookmark/types.ts';
 import {getSearchMatchesBookmarks} from '../lib/get-search-matches-bookmarks';
-import {ITagWithBookmarkLinks} from '@/entities/tag/types';
+import {ITagWithBookmarkLinks} from '@entities/tag/types';
 import {getSearchMatchesTags} from '../lib/get-search-matches-tags';
 
 export const useSearchSubmit = ({
