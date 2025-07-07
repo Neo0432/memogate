@@ -8,25 +8,28 @@ import changeNavigationBarColor from 'react-native-navigation-bar-color';
 import {colors} from '@shared/styles';
 import {PortalProvider} from '@gorhom/portal';
 import {GetShareFrom} from '@features/share-from';
+import {BootSplashProvider} from '@app/providers/bootsplash-provider';
 
 export function App(): JSX.Element {
   changeNavigationBarColor(colors.grayscale.color100);
 
   return (
-    <ReduxProvider>
-      <PortalProvider>
-        <SafeAreaProvider>
-          <GestureHandlerRootView>
-            <StatusBar
-              translucent
-              backgroundColor="transparent"
-              barStyle="dark-content"
-            />
-            <Navigation />
-            <GetShareFrom />
-          </GestureHandlerRootView>
-        </SafeAreaProvider>
-      </PortalProvider>
-    </ReduxProvider>
+    <BootSplashProvider>
+      <ReduxProvider>
+        <PortalProvider>
+          <SafeAreaProvider>
+            <GestureHandlerRootView>
+              <StatusBar
+                translucent
+                backgroundColor="transparent"
+                barStyle="dark-content"
+              />
+              <Navigation />
+              <GetShareFrom />
+            </GestureHandlerRootView>
+          </SafeAreaProvider>
+        </PortalProvider>
+      </ReduxProvider>
+    </BootSplashProvider>
   );
 }

@@ -1,5 +1,5 @@
-import {IBookmark} from '@/entities/bookmark/types';
-import {ITag, ITagWithBookmarkLinks} from '@/entities/tag/types';
+import {IBookmark} from '@entities/bookmark/types';
+import {ITagWithBookmarkLinks} from '@entities/tag/types';
 
 export const getSearchMatchesTags = (
   tags: ITagWithBookmarkLinks[],

@@ -10,6 +10,7 @@ export function ScreenLayoutSafeArea({children}: {children: ReactNode}) {
     paddingTop: insets.top,
     paddingLeft: insets.left,
     paddingRight: insets.right,
+    paddingBottom: insets.bottom,
     backgroundColor: colors.grayscale.color200,
   };
 
