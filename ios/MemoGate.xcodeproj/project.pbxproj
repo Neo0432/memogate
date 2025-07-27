@@ -20,6 +20,8 @@
 		0DADCE1981FE4D5589C880B7 /* outfit-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C57714998DA48A5A6BF23FA /* outfit-regular.ttf */; };
 		F14B76E8711C44FA9CF05FDD /* outfit-semi-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85ECA34C2BE43DAAE1E338A /* outfit-semi-bold.ttf */; };
 		038D2A2CE7AE4110BCB5BDD7 /* outfit-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC238B8ADB9C41CFB83BEC53 /* outfit-thin.ttf */; };
+		06E801CB0F954CFC84FC9E85 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E57ED380D1E48FB9A88CAC2 /* BootSplash.storyboard */; };
+		3005932553F74EE2A1F329A4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B726486F8A0C454FA93B68EF /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		6C57714998DA48A5A6BF23FA /* outfit-regular.ttf */ = {isa = PBXFileReference; name = "outfit-regular.ttf"; path = "../src/shared/assets/fonts/outfit-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A85ECA34C2BE43DAAE1E338A /* outfit-semi-bold.ttf */ = {isa = PBXFileReference; name = "outfit-semi-bold.ttf"; path = "../src/shared/assets/fonts/outfit-semi-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AC238B8ADB9C41CFB83BEC53 /* outfit-thin.ttf */ = {isa = PBXFileReference; name = "outfit-thin.ttf"; path = "../src/shared/assets/fonts/outfit-thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6E57ED380D1E48FB9A88CAC2 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "MemoGate/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B726486F8A0C454FA93B68EF /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "MemoGate/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				6E57ED380D1E48FB9A88CAC2 /* BootSplash.storyboard */,
+				B726486F8A0C454FA93B68EF /* Colors.xcassets */,
 			);
 			name = MemoGate;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				0DADCE1981FE4D5589C880B7 /* outfit-regular.ttf in Resources */,
 				F14B76E8711C44FA9CF05FDD /* outfit-semi-bold.ttf in Resources */,
 				038D2A2CE7AE4110BCB5BDD7 /* outfit-thin.ttf in Resources */,
+				06E801CB0F954CFC84FC9E85 /* BootSplash.storyboard in Resources */,
+				3005932553F74EE2A1F329A4 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

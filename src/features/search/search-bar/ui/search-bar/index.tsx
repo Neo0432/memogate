@@ -56,6 +56,7 @@ export function SearchBar({
               label: tag.name,
               value: tag.id,
             }))}
+            disabled={tags.length < 1}
             placeholder="tag"
             style={{width: 64}}
             onBlur={() => {

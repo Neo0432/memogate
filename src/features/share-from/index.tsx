@@ -13,9 +13,9 @@ export function GetShareFrom() {
         console.log('🔄 Приложение снова активно, проверяем URL...');
         Linking.getInitialURL().then(url => {
           if (url) {
-            console.log('✅ Начальный URL:', url);
+            console.log('Base url', url);
           } else {
-            console.log('❌ Начального URL нет');
+            console.error('No base url');
           }
         });
       }
