@@ -17,6 +17,7 @@ export const baseQueryWithAuth: BaseQueryFn<
   FetchBaseQueryError
 > = async (args, api, extraOptions) => {
   try {
+    console.log(API_URL); //its needed
     const token = await AsyncStorage.getItem('user_token');
 
     if (token) {
